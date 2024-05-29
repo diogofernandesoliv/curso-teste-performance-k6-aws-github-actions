@@ -12,3 +12,11 @@ jobs:
         uses: grafana/k6-action@v0.3.1
         with: 
           filename: Conteudo-Bonus/5.Bonus-github-action-k6.js
+      
+      - run: ls & mkdir report & mv index.html report
+
+      - name: step 4 - upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio de testes de performance
+          path: report
