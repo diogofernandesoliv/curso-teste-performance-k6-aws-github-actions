@@ -15,6 +15,6 @@ export default function(){
     const res = http.get(BASE_URL);
 
     check (res, {
-        'status code 200': (r)=> r.status === 200
+        'status code 200 ': (r)=> r.status === 200
     });
 }
